@@ -34,7 +34,7 @@ const services = [
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-gray-50/5 dark:bg-white/5">
+    <section id="services" className="py-24 bg-white dark:bg-black transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,8 +43,8 @@ const Services: React.FC = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <p className="max-w-2xl text-gray-500">
+          <h2 className="text-4xl font-black mb-4 tracking-tighter uppercase text-black dark:text-white">Our Services</h2>
+          <p className="max-w-2xl text-black/70 dark:text-white/70 font-medium">
             At MASS Developers, we are committed to delivering spaces that are not just structurally sound but also aesthetically pleasing and functional.
           </p>
         </motion.div>
@@ -58,14 +58,14 @@ const Services: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="relative p-8 border border-black/5 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-md transition-all duration-500 rounded-3xl group overflow-hidden shadow-lg hover:shadow-[0_10px_40px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_10px_40px_rgba(255,255,255,0.1)] hover:border-black/20 dark:hover:border-white/30"
+              className="relative p-8 border border-black dark:border-white bg-white dark:bg-black transition-all duration-500 rounded-3xl group overflow-hidden shadow-none hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_10px_40px_rgba(255,255,255,0.15)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5 dark:to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="w-16 h-16 bg-background border border-border flex items-center justify-center rounded-2xl text-foreground mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-sm">
+              <div className="absolute inset-0 bg-black/5 dark:bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="w-16 h-16 bg-black text-white dark:bg-white dark:text-black flex items-center justify-center rounded-2xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-sm border border-transparent">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4 relative z-10">{service.title}</h3>
-              <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-sm relative z-10">
+              <h3 className="text-xl font-bold mb-4 relative z-10 text-black dark:text-white uppercase tracking-wider">{service.title}</h3>
+              <p className="text-black/70 dark:text-white/70 font-medium leading-relaxed text-sm relative z-10">
                 {service.description}
               </p>
             </motion.div>
